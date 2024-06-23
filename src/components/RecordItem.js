@@ -1,8 +1,10 @@
 import React from "react";
 import { MdModeEdit } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { useDispatch } from "react-redux";
 
-const RecordItem = ({ data, onEdit, onDelete }) => {
+const RecordItem = ({ index, data, onEdit, onDelete }) => {
+  const dispatch = useDispatch();
   return (
     <div className="flex flex-row mb-2">
       <div className="flex items-center text-base">
@@ -12,9 +14,10 @@ const RecordItem = ({ data, onEdit, onDelete }) => {
         {data.epf && (
           <span className="flex items-center ml-2 text-xs">
             <span className="mr-1 text-blue-600">✔</span>
-            <span >EPF/ETF</span>
+            <span>EPF/ETF</span>
           </span>
-        )}        <span className="h-6 mx-4 border-l border-gray-300"></span>
+        )}{" "}
+        <span className="h-6 mx-4 border-l border-gray-300"></span>
       </div>
 
       <div className="flex items-center space-x-2">
@@ -25,7 +28,9 @@ const RecordItem = ({ data, onEdit, onDelete }) => {
           <MdModeEdit />
         </button>
         <button
-          onClick={onDelete}
+          onClick={() => {
+            dispatch(onDelete(index));
+          }}
           className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
         >
           <RxCross2 />

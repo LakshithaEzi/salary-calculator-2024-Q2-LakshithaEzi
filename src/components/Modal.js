@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import Modal from "react-modal";
-import { Type } from "../util";
+import { Type, isNumeric } from "../util";
 import { addEarning, addDeduction } from "../redux/actions/salaryActions";
 import { RxCross2 } from "react-icons/rx";
 
@@ -30,21 +30,23 @@ const EarningModal = ({ isOpen, onRequestClose, type }) => {
   const dispatch = useDispatch();
   const [earning, setEarning] = useState({
     description: "",
-    amount: 0,
+    amount: "",
     epf: false,
   });
-  const [deduction, setDeduction] = useState({ description: "", amount: 0 });
+  const [deduction, setDeduction] = useState({ description: "", amount: "" });
 
-  const handleAdd = () => {
-    if (type === Type.Earnings) {
-      dispatch(addEarning(earning));
-      setEarning({ description: "", amount: 0, epf: false });
-    } else {
-      dispatch(addDeduction(deduction));
-      setDeduction({ description: "", amount: 0 });
+  const handleAdd = useCallback(() => {
+    if (isNumeric(earning.amount) || isNumeric(deduction.amount)) {
+      if (type === Type.Earnings) {
+        dispatch(addEarning(earning));
+        setEarning({ description: "", amount: "", epf: false });
+      } else {
+        dispatch(addDeduction(deduction));
+        setDeduction({ description: "", amount: "" });
+      }
+      onRequestClose();
     }
-    onRequestClose();
-  };
+  }, [dispatch, earning, deduction, type, onRequestClose]);
 
   return (
     <Modal
