@@ -1,6 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
+export const getMonthlyTax = (salary) => {
+  const annualSalary = 12 * salary;
+  let annualTax = 0;
+
+  if (annualSalary <= 1200000) {
+    annualTax = 0;
+  } else if (annualSalary <= 1700000) {
+    annualTax = (annualSalary - 1200000) * 0.06;
+  } else if (annualSalary <= 2200000) {
+    annualTax = 500000 * 0.06 + (annualSalary - 1700000) * 0.12;
+  } else if (annualSalary <= 2700000) {
+    annualTax = 500000 * (0.06 + 0.12) + (annualSalary - 2200000) * 0.18;
+  } else if (annualSalary <= 3200000) {
+    annualTax = 500000 * (0.06 + 0.12 + 0.18) + (annualSalary - 2700000) * 0.24;
+  } else if (annualSalary <= 3700000) {
+    annualTax =
+      500000 * (0.06 + 0.12 + 0.18 + 0.24) + (annualSalary - 3200000) * 0.3;
+  } else {
+    annualTax =
+      500000 * (0.06 + 0.12 + 0.18 + 0.24 + 0.3) +
+      (annualSalary - 3700000) * 0.36;
+  }
+
+  return annualTax / 12;
+};
+
 const ResultComponent = () => {
   const { basicSalary, earnings, deductions } = useSelector(
     (state) => state.salary
@@ -59,32 +85,6 @@ const ResultComponent = () => {
     });
   }, [basicSalary, earnings, deductions]);
 
-  const getMonthlyTax = (salary) => {
-    const annualSalary = 12 * salary;
-    let annualTax = 0;
-
-    if (annualSalary <= 1200000) {
-      annualTax = 0;
-    } else if (annualSalary <= 1700000) {
-      annualTax = (annualSalary - 1200000) * 0.06;
-    } else if (annualSalary <= 2200000) {
-      annualTax = 500000 * 0.06 + (annualSalary - 1700000) * 0.12;
-    } else if (annualSalary <= 2700000) {
-      annualTax = 500000 * (0.06 + 0.12) + (annualSalary - 2200000) * 0.18;
-    } else if (annualSalary <= 3200000) {
-      annualTax =
-        500000 * (0.06 + 0.12 + 0.18) + (annualSalary - 2700000) * 0.24;
-    } else if (annualSalary <= 3700000) {
-      annualTax =
-        500000 * (0.06 + 0.12 + 0.18 + 0.24) + (annualSalary - 3200000) * 0.3;
-    } else {
-      annualTax =
-        500000 * (0.06 + 0.12 + 0.18 + 0.24 + 0.3) +
-        (annualSalary - 3700000) * 0.36;
-    }
-
-    return annualTax / 12;
-  };
   return (
     <div
       className="p-6 text-base border-2 rounded-lg bg-grey-100"
