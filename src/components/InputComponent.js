@@ -22,12 +22,19 @@ const InputComponent = () => {
   const handleReset = () => {
     dispatch(reset());
   };
+
   const handleBasicSalaryChange = (e) => {
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      dispatch(updateBasicSalary(parseFloat(value.toFixed(2))));
+    const value = e.target.value;
+    if (value === "") {
+      dispatch(updateBasicSalary(0));
+    } else {
+      const parsedValue = parseFloat(value);
+      if (!isNaN(parsedValue)) {
+        dispatch(updateBasicSalary(parsedValue));
+      }
     }
   };
+
   return (
     <div
       className="p-6 border-2 rounded-lg bg-grey-100"
@@ -53,10 +60,11 @@ const InputComponent = () => {
           Basic Salary
         </label>
         <input
+          placeholder="Eg: 10,000"
           type="number"
           className="px-3 py-2 leading-tight text-gray-700 border rounded focus:outline-none"
           style={{ width: "356px" }}
-          value={basicSalary}
+          value={basicSalary || ""}
           onChange={handleBasicSalaryChange}
         />
       </div>

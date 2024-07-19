@@ -5,28 +5,25 @@
 
 .App {
   font-family: 'Inter', Arial, sans-serif;
-  padding: 142px 128px;
+  padding: 12px 128px;
   margin: auto;
 }
-/* Hide the spin buttons in WebKit browsers */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Hide the spin buttons in Firefox */
+
 input[type=number] {
   -moz-appearance: textfield;
 }
-/* customScrollbar.css */
 .custom-scrollbar {
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #a0aec0 #edf2f7; /* For Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: #a0aec0 #edf2f7; 
 }
 
-/* For WebKit browsers (Chrome, Safari) */
-/* Track */
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
@@ -35,18 +32,17 @@ input[type=number] {
   background: #edf2f7;
 }
 
-/* Thumb */
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #a0aec0;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   border: 2px solid #edf2f7;
 }
 
-/* Remove scrollbar buttons and arrows */
 .custom-scrollbar::-webkit-scrollbar-button {
   display: none;
 }
 
 .custom-scrollbar::-webkit-scrollbar-corner {
-  background-color: transparent; /* Hide scrollbar corner */
+  background-color: transparent; 
 }

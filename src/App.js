@@ -5,6 +5,9 @@ import SalaryForm from "./pages/SalaryForm";
 function App() {
   return (
     <div className="App">
+      <p className="p-2 text-3xl text-center text-black">
+        Salary calculator
+      </p>
       <SalaryForm />
     </div>
   );

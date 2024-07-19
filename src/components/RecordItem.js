@@ -22,15 +22,13 @@ const RecordItem = ({ index, data, onEdit, onDelete }) => {
 
       <div className="flex items-center space-x-2">
         <button
-          onClick={onEdit}
+          onClick={() => onEdit(index)}
           className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
         >
           <MdModeEdit />
         </button>
         <button
-          onClick={() => {
-            dispatch(onDelete(index));
-          }}
+          onClick={() => dispatch(onDelete(index))}
           className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
         >
           <RxCross2 />
