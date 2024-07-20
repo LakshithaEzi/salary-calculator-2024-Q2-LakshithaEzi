@@ -87,7 +87,7 @@ const ResultComponent = () => {
 
   return (
     <div
-      className="p-6 text-base border-2 rounded-lg bg-[#CB0B08]  "
+      className="p-6 text-base border-2 rounded-lg bg-[#794746]  "
       style={{ borderColor: "#E0E0E0", width: "500px" ,height:"616px " }}
     >
       <h1 className="mb-4 text-xl font-bold text-white">Your salary</h1>
