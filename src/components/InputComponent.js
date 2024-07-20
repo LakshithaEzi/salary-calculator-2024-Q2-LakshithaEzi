@@ -37,16 +37,21 @@ const InputComponent = () => {
 
   return (
     <div
-      className="p-6 border-2 rounded-lg bg-grey-100"
+      className="p-6 border-2 rounded-lg bg-grey-100 "
       style={{
         borderColor: "#E0E0E0",
         width: "680px",
         height: "616px",
-        background: "#F9F9F9",
+        background: "#D6DBE3",
+        boxShadow: "0 4px 8px rgba(158, 104, 67,  0.3)",
+        backdropFilter: "blur(5px)",
+        
       }}
     >
-      <div className="flex justify-between">
-        <h1 className="mb-4 text-xl font-bold">Calculate Your Salary</h1>
+      <div className="flex justify-between text-base font-tp">
+        <h1 className="mb-4 text-xl font-bold text-black fill-orange-100">
+          Calculate Your Salary
+        </h1>
         <button
           className="flex flex-row space-x-1 text-blue-600"
           onClick={handleReset}

@@ -87,72 +87,72 @@ const ResultComponent = () => {
 
   return (
     <div
-      className="p-6 text-base border-2 rounded-lg bg-grey-100"
-      style={{ borderColor: "#E0E0E0", width: "480px" }}
+      className="p-6 text-base border-2 rounded-lg bg-[#CB0B08]  "
+      style={{ borderColor: "#E0E0E0", width: "500px" ,height:"616px " }}
     >
-      <h1 className="mb-4 text-xl font-bold">Your salary</h1>
+      <h1 className="mb-4 text-xl font-bold text-white">Your salary</h1>
       <div className="mb-4">
-        <p className="mb-4 text-sm" style={{ color: "#757575" }}>
+        <p className="mb-4 text-sm" style={{ color: "#B4B9C4" }}>
           <strong>Items</strong>
           <span className="float-right">
             <strong>Amount</strong>
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           Basic Salary
           <span className="float-right">
             {salaryDetails.totalEarnings.toFixed(2)}
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           Gross Earning
           <span className="float-right">
             {salaryDetails.grossEarnings.toFixed(2)}
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           Gross Deduction
           <span className="float-right">
             - {salaryDetails.grossDeduction.toFixed(2)}
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           Employee EPF (8%)
           <span className="float-right">
             - {salaryDetails.employeeEPF.toFixed(2)}
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           APIT
           <span className="float-right">- {salaryDetails.tax.toFixed(2)}</span>
         </p>
       </div>
       <p
-        className="p-2 mb-6 font-bold rounded"
+        className="p-2 mb-6 font-bold text-white rounded"
         style={{ border: "1px solid #E0E0E0 " }}
       >
-        Net Salary (Take Home)
-        <span className="float-right">
+        Net Salary 
+        <span className="float-right text-white ">
           {salaryDetails.netSalary.toFixed(2)}
         </span>
       </p>
-      <div className="mb-4">
-        <p className="mb-4 text-sm" style={{ color: "#757575" }}>
+      <div className="mb-4 text-white">
+        <p className="mb-4 text-sm" style={{ color: "#B4B9C4" }}>
           <strong>Contribution from the Employer</strong>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           Employer EPF (12%)
           <span className="float-right">
             {salaryDetails.employerEPF.toFixed(2)}
           </span>
         </p>
-        <p className="mb-6">
+        <p className="mb-6 text-white">
           Employer ETF (3%)
           <span className="float-right">
             {salaryDetails.employerETF.toFixed(2)}
           </span>
         </p>
-        <p className="mb-2">
+        <p className="mb-2 text-white">
           CTC (Cost to Company)
           <span className="float-right">
             {salaryDetails.costToCompany.toFixed(2)}

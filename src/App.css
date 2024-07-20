@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +10,8 @@
   font-family: 'Inter', Arial, sans-serif;
   padding: 12px 128px;
   margin: auto;
+  background: #f6f4f2;
+  
 }
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -20,7 +25,7 @@ input[type=number] {
 }
 .custom-scrollbar {
   scrollbar-width: thin; 
-  scrollbar-color: #a0aec0 #edf2f7; 
+  scrollbar-color: #e4eaf2 #edf2f7; 
 }
 
 
