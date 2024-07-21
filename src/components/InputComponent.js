@@ -40,8 +40,8 @@ const InputComponent = () => {
       className="p-6 border-2 rounded-lg bg-grey-100 "
       style={{
         borderColor: "#E0E0E0",
-        width: "680px",
-        height: "616px",
+        width: "544px",
+        height: "492.8px",
         background: "#D6DBE3",
         boxShadow: "0 4px 8px rgba(158, 104, 67,  0.3)",
         backdropFilter: "blur(5px)",
