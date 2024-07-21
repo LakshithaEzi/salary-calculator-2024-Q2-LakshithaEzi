@@ -37,15 +37,11 @@ const InputComponent = () => {
 
   return (
     <div
-      className="p-6 border-2 rounded-lg bg-grey-100 "
+      className="items-center p-6 border-2 rounded-lg bg-grey-100 md:min-w-[544px] h-[600px]"
       style={{
         borderColor: "#E0E0E0",
-        width: "544px",
-        height: "492.8px",
         background: "#D6DBE3",
-        
         backdropFilter: "blur(5px)",
-        
       }}
     >
       <div className="flex justify-between text-base font-tp">
