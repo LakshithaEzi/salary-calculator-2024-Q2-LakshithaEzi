@@ -37,7 +37,7 @@ const InputComponent = () => {
 
   return (
     <div
-      className="items-center p-6 border-2 rounded-lg bg-grey-100 md:min-w-[544px] h-[600px]"
+      className="items-center p-6 border-2 rounded-lg bg-grey-100 md:min-w-[544px] h-[580px]"
       style={{
         borderColor: "#E0E0E0",
         background: "#D6DBE3",
