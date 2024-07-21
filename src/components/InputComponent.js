@@ -43,7 +43,7 @@ const InputComponent = () => {
         width: "544px",
         height: "492.8px",
         background: "#D6DBE3",
-        boxShadow: "0 4px 8px rgba(158, 104, 67,  0.3)",
+        
         backdropFilter: "blur(5px)",
         
       }}
