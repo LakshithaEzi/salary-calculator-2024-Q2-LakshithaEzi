@@ -11,6 +11,7 @@
   padding: 12px 128px;
   margin: auto;
   background: #f6f4f2;
+  padding: 20px;
   
 }
 input[type=number]::-webkit-outer-spin-button,

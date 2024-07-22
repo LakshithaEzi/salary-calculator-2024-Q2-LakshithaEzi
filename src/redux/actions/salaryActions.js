@@ -23,6 +23,16 @@ export const deleteDeduction = (index) => ({
   payload: index,
 });
 
+export const EditEarning = (index) => ({
+  type: "UPDATE_EARNING",
+  payload: index,
+});
+
+export const EditDeduction = (index) => ({
+  type: "UPDATE_DEDUCTIONS",
+  payload: index,
+});
+
 export const reset = () => ({
   type: "RESET",
 });
